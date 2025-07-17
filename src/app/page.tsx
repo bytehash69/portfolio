@@ -1,6 +1,8 @@
 "use client";
 import { Hint } from "@/components/Hint";
+import { Skills } from "@/components/Skills";
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 import { WorkExp } from "@/components/WorkExp";
 import { Globe, HelpCircle } from "lucide-react";
 import Image from "next/image";
@@ -13,8 +15,8 @@ import { MdEmail } from "react-icons/md";
 export default function Home() {
   return (
     <div className="font-mono flex flex-col min-h-screen p-8 gap-16 sm:p-20">
-      <div className="flex items-center gap-2 mt-6">
-        <div className="relative w-[110px] h-[110px] overflow-hidden mr-6 flex-shrink-0">
+      <div className="flex items-center gap-2">
+        <div className="relative w-[110px] h-[120px] overflow-hidden mr-6 flex-shrink-0">
           <Image
             src="/pfp.jpg"
             alt="PFP"
@@ -98,20 +100,28 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="mt-4 flex flex-col gap-4">
-        <h1 className="text-2xl font-semibold mb-2">Work Experience -</h1>
-        <WorkExp
-          title="Solana Development"
-          description="Ackee Blockchain S7"
-          img="ackee.jpg"
-          status="On going"
-        />
-        <WorkExp
-          title="Fullstack web development"
-          description="100xdevs Cohort 3"
-          img="100x.png"
-          status="Completed"
-        />
+      <div className=" flex flex-col gap-12">
+        <div className="flex flex-col gap-4">
+          <h1 className="text-3xl font-bold mb-2">Work Experience -</h1>
+          <WorkExp
+            title="Solana Development"
+            description="Ackee Blockchain S7"
+            img="ackee.jpg"
+            status="On going"
+          />
+          <WorkExp
+            title="Fullstack web development"
+            description="100xdevs Cohort 3"
+            img="100x.png"
+            status="Completed"
+          />
+        </div>
+        <Separator />
+        <div className="flex flex-col gap-4">
+          <h1 className="text-3xl font-bold mb-2">Skills -</h1>
+          <Skills />
+        </div>
+        <Separator />
       </div>
     </div>
   );
