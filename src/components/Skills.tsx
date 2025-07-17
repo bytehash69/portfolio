@@ -19,7 +19,7 @@ export const Skills = () => {
   return (
     <div>
       {skills.map((skill, i) => (
-        <Badge key={i} className="font-semibold m-1 text-sm">
+        <Badge key={i} className="font-semibold m-0.5">
           {skill}
         </Badge>
       ))}

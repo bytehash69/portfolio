@@ -1,4 +1,5 @@
 "use client";
+import { Github } from "@/components/Github";
 import { Hint } from "@/components/Hint";
 import { Skills } from "@/components/Skills";
 import { Button } from "@/components/ui/button";
@@ -14,9 +15,9 @@ import { MdEmail } from "react-icons/md";
 
 export default function Home() {
   return (
-    <div className="font-mono flex flex-col min-h-screen p-8 gap-16 sm:p-20">
-      <div className="flex items-center gap-2">
-        <div className="relative w-[110px] h-[120px] overflow-hidden mr-6 flex-shrink-0">
+    <div className="font-mono flex flex-col min-h-screen p-8 gap-6 md:gap-16 sm:p-20">
+      <div className="md:flex items-center gap-6">
+        <div className="relative w-[70px] h-[80px] md:w-[110px] md:h-[120px] overflow-hidden mb-4 md:mb-0 flex-shrink-0">
           <Image
             src="/pfp.jpg"
             alt="PFP"
@@ -24,12 +25,14 @@ export default function Home() {
             className="object-cover rounded-2xl"
           />
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2 md:gap-4">
           <div className="flex items-baseline gap-1">
-            <h1 className="text-5xl font-bold tracking-tight">Byte.</h1>
+            <h1 className="text-3xl md:text-5xl font-bold tracking-tight">
+              Byte.
+            </h1>
             <div className="flex text-muted-foreground items-center gap-1">
-              <Globe className="size-4" />
-              <p>India</p>
+              <Globe className="size-3" />
+              <p className="text-sm">India</p>
             </div>
           </div>
           <p className="font-semibold">A fullstack and blockchain developer</p>
@@ -40,7 +43,7 @@ export default function Home() {
             magnam. Assumenda placeat facilis sed esse, nulla voluptatibus
             perferendis blanditiis ad voluptate, dolore odio.
           </p>
-          <div className="flex gap-2">
+          <div className="flex gap-2 mt-3 md:mt-0">
             <Hint label="Twitter">
               <Button
                 className="text-muted-foreground shadow-none rounded-sm"
@@ -78,7 +81,7 @@ export default function Home() {
               </Button>
             </Hint>
           </div>
-          <div className="flex gap-2">
+          <div className="hidden md:flex gap-2">
             <Button
               className="text-muted-foreground shadow-none rounded-sm"
               variant="outline"
@@ -100,9 +103,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className=" flex flex-col gap-12">
+      <div className=" flex flex-col gap-8">
         <div className="flex flex-col gap-4">
-          <h1 className="text-3xl font-bold mb-2">Work Experience -</h1>
+          <h1 className="text-2xl font-bold mb-2">Work Experience -</h1>
           <WorkExp
             title="Solana Development"
             description="Ackee Blockchain S7"
@@ -118,10 +121,14 @@ export default function Home() {
         </div>
         <Separator />
         <div className="flex flex-col gap-4">
-          <h1 className="text-3xl font-bold mb-2">Skills -</h1>
+          <h1 className="text-2xl font-bold ml-1">Skills -</h1>
           <Skills />
         </div>
         <Separator />
+        <div>
+          <h1 className="text-2xl font-bold mb-4 ml-1">Github activity -</h1>
+          <Github />
+        </div>
       </div>
     </div>
   );
