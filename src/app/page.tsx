@@ -1,6 +1,7 @@
 "use client";
 import { Hint } from "@/components/Hint";
 import { Button } from "@/components/ui/button";
+import { WorkExp } from "@/components/WorkExp";
 import { Globe, HelpCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -96,6 +97,21 @@ export default function Home() {
             </Button>
           </div>
         </div>
+      </div>
+      <div className="mt-4 flex flex-col gap-4">
+        <h1 className="text-2xl font-semibold mb-2">Work Experience -</h1>
+        <WorkExp
+          title="Solana Development"
+          description="Ackee Blockchain S7"
+          img="ackee.jpg"
+          status="On going"
+        />
+        <WorkExp
+          title="Fullstack web development"
+          description="100xdevs Cohort 3"
+          img="100x.png"
+          status="Completed"
+        />
       </div>
     </div>
   );
