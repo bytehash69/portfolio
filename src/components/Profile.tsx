@@ -1,8 +1,8 @@
-import { Globe } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import { Hint } from "./Hint";
 import { Button } from "./ui/button";
+import { Globe } from "lucide-react";
 import { FaGithub, FaXTwitter } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 

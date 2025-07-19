@@ -1,6 +1,7 @@
 "use client";
 import { Github } from "@/components/Github";
 import { Hint } from "@/components/Hint";
+import { Pow } from "@/components/Pow";
 import { Profile } from "@/components/Profile";
 import { Skills } from "@/components/Skills";
 import { Button } from "@/components/ui/button";
@@ -38,6 +39,26 @@ export default function Home() {
         <div className="flex flex-col gap-4">
           <h1 className="text-2xl font-bold ml-1">Skills -</h1>
           <Skills />
+        </div>
+        <Separator />
+        <div className="items-center justify-center">
+          <h1 className="items-center font-bold text-2xl">Proof of Work -</h1>
+          <div className="grid grid-cols-2 gap-2 mt-4">
+            <Pow
+              img="/vaultora1.png"
+              title="Vaultora"
+              description="A simple web based wallet manager for your solana wallets"
+              repoLink="https://github.com/bytehash69/vaultora"
+              sourceLink="https://vaultora.adiflicks.site/"
+            />
+            <Pow
+              img="/vaultora1.png"
+              title="Testing"
+              description="A simple web based wallet manager for your solana wallets"
+              repoLink="https://github.com/bytehash69/vaultora"
+              sourceLink="https://vaultora.adiflicks.site/"
+            />
+          </div>
         </div>
         <Separator />
         <div>
