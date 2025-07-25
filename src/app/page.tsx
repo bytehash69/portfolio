@@ -43,7 +43,7 @@ export default function Home() {
         <Separator />
         <div className="items-center justify-center">
           <h1 className="items-center font-bold text-2xl">Proof of Work -</h1>
-          <div className="grid grid-cols-2 gap-2 mt-4">
+          <div className="grid grid-rows-1 md:grid-cols-2 gap-2 mt-4">
             <Pow
               img="/vaultora1.png"
               title="Vaultora"

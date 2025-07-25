@@ -30,13 +30,15 @@ export const Pow = ({
   return (
     <Card className="p-0 gap-0">
       <CardHeader className="p-3">
-        <Image
-          src={img}
-          width={300}
-          height={200}
-          alt="powImg"
-          className="rounded-lg"
-        />
+        <div className="flex items-center justify-center">
+          <Image
+            src={img}
+            width={300}
+            height={200}
+            alt="powImg"
+            className="rounded-lg"
+          />
+        </div>
         <div className="p-1">
           <CardTitle className="mt-2">{title}</CardTitle>
           <CardDescription className="text-sm mt-1">
